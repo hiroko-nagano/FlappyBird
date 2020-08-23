@@ -189,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             upper.position = CGPoint(x:0, y: under_wall_y + wallTexture.size().height + slit_length)
             //スプライトに物理演算を設定する
             upper.physicsBody = SKPhysicsBody(rectangleOf: wallTexture.size())
-            under.physicsBody?.categoryBitMask = self.wallCategory
+            upper.physicsBody?.categoryBitMask = self.wallCategory
             //衝突の時動かないように
             upper.physicsBody?.isDynamic = false
             
